@@ -15,7 +15,7 @@ module Antigate
   end
 
   class Wrapper
-  	attr_accessor :phrase, :regsense, :numeric, :calc, :min_len, :max_len, :domain
+  	attr_accessor :phrase, :regsense, :numeric, :calc, :min_len, :max_len, :is_russian, :domain
 
   	def initialize(key)
   		@key = key
