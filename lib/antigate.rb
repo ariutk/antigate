@@ -26,6 +26,7 @@ module Antigate
   		@calc = 0
   		@min_len = 0
   		@max_len = 0
+      @is_russian = 0
   		@domain = "antigate.com"
   	end
 
@@ -79,7 +80,8 @@ module Antigate
   				'numeric' => @numeric,
   				'calc' => @calc,
   				'min_len' => @min_len,
-  				'max_len' => @max_len
+  				'max_len' => @max_len,
+          'is_russian' => @is_russian
   			}
   			return Net::HTTP.post_form(URI("http://#{@domain}/in.php"), params).body rescue nil
   		end
